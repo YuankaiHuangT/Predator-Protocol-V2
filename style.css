@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  overflow: hidden;
+  cursor: crosshair;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#upgrade-screen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(6, 6, 14, 0.85);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 10;
+}
+
+#upgrade-screen h2 {
+  color: #fff;
+  font-family: monospace;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#upgrade-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.ucard {
+  width: 180px;
+  padding: 20px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: monospace;
+  border: 1px solid #333;
+  background: #0e0e1a;
+  transition: transform .12s, border-color .12s;
+  user-select: none;
+}
+
+.ucard:hover {
+  transform: translateY(-4px);
+}
+
+.ucard.common { border-color: #555; }
+.ucard.rare   { border-color: #378add; }
+.ucard.legend { border-color: #ef9f27; }
+
+.ucard .rarity {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ucard.common .rarity { color: #888; }
+.ucard.rare   .rarity { color: #85b7eb; }
+.ucard.legend .rarity { color: #ef9f27; }
+
+.ucard .name {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.ucard .desc {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.ucard.common:hover { border-color: #888; }
+.ucard.rare:hover   { border-color: #85b7eb; box-shadow: 0 0 12px rgba(55,138,221,0.25); }
+.ucard.legend:hover { border-color: #fac775; box-shadow: 0 0 16px rgba(239,159,39,0.3); }
