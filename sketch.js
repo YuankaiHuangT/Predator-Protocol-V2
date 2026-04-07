@@ -84,7 +84,7 @@ class GameState {
     this.hp = 100;
     this.maxHp = 100;
     this.xp = 0;
-    this.level = 5;
+    this.level = 0;
   }
 
   update() {
