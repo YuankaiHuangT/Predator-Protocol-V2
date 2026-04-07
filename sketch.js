@@ -28,8 +28,8 @@ class Player {
     this.vx = 0;
     this.vy = 0;
     this.angle = -Math.PI / 2;
-    this.speed = 10.0;
-    this.size = 20;
+    this.speed = 20.0;
+    this.size = 40;
     this.control = 0.12;
   }
 
